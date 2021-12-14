@@ -45,7 +45,6 @@ def version2():
             if i == len(s) or s[i] != strs[0][i]:
                 return LCP
         LCP += strs[0][i]
-        print(LCP)
     return LCP
 
 if __name__ == "__main__":
