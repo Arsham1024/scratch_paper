@@ -8,9 +8,6 @@ def version1():
             if nums[i] + nums[j] == target:
                 return [i, j]
 
-def version2():
-    
-
 
 if __name__ == "__main__":
     print(version1())
