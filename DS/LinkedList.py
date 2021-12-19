@@ -28,6 +28,24 @@ class LinkedList:
 
             itr.next = node
 
+    def remove(self,index):
+        if index >= self.length() or index < 0:
+            raise Exception("Not a valid index")
+
+        itr = self.head
+
+        if index == 0:
+            self.head = itr.next
+            return
+
+        i = 0
+        temp = 0
+        while itr:
+            if i == index -1:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            i += 1
 
 
     # Helper print method
@@ -42,15 +60,36 @@ class LinkedList:
         else:
             return "No Head"
 
+    def length(self):
+        count = 0
+        node = self.head
+
+        if not self.head:
+            return 0
+        elif not node.next:
+            return 1
+
+        else:
+            while(node):
+                count +=1
+                node = node.next
+            return count
+
 
 
 if __name__ == "__main__":
     ll = LinkedList()
     ll.inset_at_head(1)
 
-    for i in range(1,50):
+    for i in range(1,15):
         rand = round(random() * 100 % 100, 2)
         ll.inset_at_head(rand)
 
     ll.insert_at_end("This is the end, hold your breath and count to ten...")
     ll.print()
+
+    ll.remove(1)
+
+    ll.print()
+
+    print(ll.length())
