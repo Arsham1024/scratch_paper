@@ -14,6 +14,23 @@ class LinkedList:
         node = Node(data, self.head)
         self.head = node
 
+    def insert_at_end(self, data):
+        node = Node(data, None)
+
+        if not self.head:
+            self.head = node
+            return
+
+        else:
+            itr = self.head
+            while(itr.next):
+                itr = itr.next
+
+            itr.next = node
+
+
+
+    # Helper print method
     def print(self):
         string = ''
         itr = self.head
@@ -26,6 +43,7 @@ class LinkedList:
             return "No Head"
 
 
+
 if __name__ == "__main__":
     ll = LinkedList()
     ll.inset_at_head(1)
@@ -33,4 +51,5 @@ if __name__ == "__main__":
     for i in range(1,50):
         ll.inset_at_head(rand)
 
+    ll.insert_at_end("This is the end, hold your breath and count to ten...")
     ll.print()
