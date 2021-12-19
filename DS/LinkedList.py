@@ -47,8 +47,9 @@ class LinkedList:
 if __name__ == "__main__":
     ll = LinkedList()
     ll.inset_at_head(1)
-    rand = round(random()*100%100, 2)
+
     for i in range(1,50):
+        rand = round(random() * 100 % 100, 2)
         ll.inset_at_head(rand)
 
     ll.insert_at_end("This is the end, hold your breath and count to ten...")
