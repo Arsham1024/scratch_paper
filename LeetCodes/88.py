@@ -10,15 +10,17 @@ def merge():
 # case where num2 is empty no change in num1
 # case where num1 is empty
 
-    if m < 1:
-        nums1 = nums1.copy()
+    if m == 0:
+        for i, item in enumerate(nums2):
+            nums1[i] = item
+        return nums1
 
-# Most common case
-    for i,item in enumerate(nums2):
-        nums1[i+m] = item
+    # Most common case
+    else:
+        for i, item in enumerate(nums2):
+            nums1[i + m] = item
 
     # SORT THE ARRAY AT THE END.
-    print(nums1)
     nums1.sort()
 
 
