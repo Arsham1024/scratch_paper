@@ -11,11 +11,11 @@ def max_flowerbox(nutrition_values):
 
     # Dynamic programming solution
     else:
-        a = 0 # f(i-2)
+        best_sofar = 0 # f(i-2)
         b = 0 # f(i-1)
-        for val in nutrition_values: 
-            a,b = b, max(a+val, b)
-            print("a" , a)
+        for val in nutrition_values:
+            best_sofar,b = b, max(best_sofar+val, b)
+            print("best so far" , best_sofar)
             print("b", b , "\n")
 
         return b
