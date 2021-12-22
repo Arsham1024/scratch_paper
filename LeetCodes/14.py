@@ -48,4 +48,4 @@ def version2():
     return LCP
 
 if __name__ == "__main__":
-    version2()
+    print(version2())
