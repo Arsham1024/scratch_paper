@@ -21,5 +21,5 @@ if __name__ == '__main__':
     ]
 
     for i in testcase:
-        # print(version1(i[0], i[1]))
+        print(version1(i[0], i[1]))
         # print(version2(i[0], i[1]))
